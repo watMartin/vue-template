@@ -50,6 +50,11 @@ module.exports = {
     }],
     {{/if_eq}}
     // allow debugger during development
-    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0
+    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
+
+    // My changes
+    'no-trailing-spaces': ["error", { "skipBlankLines": true }],
+    'no-multiple-empty-lines': ["error", { "max": 2, "maxEOF": 1 }],
+    'padded-blocks': 'off'
   }
 }
