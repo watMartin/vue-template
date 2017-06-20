@@ -4,11 +4,9 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 // application routes
-import index from '@/containers/views/index'
-
+import index from '@/components/views/index'
 const routes = [
-  // main nav
-  { path: '/', name: 'index', component: index },
+  { path: '/', name: 'index', component: index }
 ]
 
 // export router instance
