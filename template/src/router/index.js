@@ -1,15 +1,21 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import notFoundComponent from '@/components/notFoundComponent'
-import hello from '@/components/hello'
 
 Vue.use(Router)
 
-export default new Router({
+// application routes
+import index from '@/containers/views/index'
+
+const routes = [
+  // main nav
+  { path: '/', name: 'index', component: index },
+]
+
+// export router instance
+let router = new Router({
   mode: 'history',
-  base: __dirname,
-  routes: [
-    { path: '/', name: 'Hello', component: hello },
-    { path: '*', component: notFoundComponent }
-  ]
+  routes,
+  linkActiveClass: 'is-active'
 })
+
+export default router
