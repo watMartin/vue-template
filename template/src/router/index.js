@@ -4,7 +4,7 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 // application routes
-import index from '@/components/views/index'
+import index from '@/views/index'
 const routes = [
   { path: '/', name: 'index', component: index }
 ]
